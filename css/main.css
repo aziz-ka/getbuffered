@@ -1,13 +1,62 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+body {
+	color: #59626a;
+}
+a {
+	color: #59626a;
+}
+.nav {
+	background-color: #f4f7f9;
+	border: 1px solid #ced7df;
+}
+.nav .active a {
+	border-top-color: #fff !important;
+}
+.nav li a {
+	margin: 0;
+	padding: 15px 40px;
+	border-radius: 0;
+}
+.nav li a span {
+	font-size: 16px;
+	top: 2px;
+	margin-left: 5px;
+}
+.nav li a:hover, .nav .active a {
+	color: #323b43 !important;
+}
 
-
-
-
+.tab-pane>div {
+	margin: 20px 0;
+}
+.tab-pane>div>.glyphicon {
+	font-size: 2em;
+	color: #ced7df;
+}
+.qualities {
+	min-height: 100px;
+	padding: 10px;
+	border: 1px solid #ced7df;
+	border-radius: 3px;
+}
+.qualities .lead {
+	padding-bottom: 40px;
+	border-bottom: 1px solid #f4f7f9;
+}
+.qualities img {
+	max-width: 100px;
+	max-height: 100px;
+	padding: 0;
+}
+.qualities a, .qualities div p {
+	font-size: 12px;
+}
+.qualities div p {
+	padding-top: 8px;
+}
 
 
 

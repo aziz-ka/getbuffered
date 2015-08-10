@@ -22,7 +22,7 @@
 			if(companyPick === "none") {
 				$(".alert").hide();
 			}
-		})
+		});
 	} else {
 		$("#entry-form").modal("hide");
 	}

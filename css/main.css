@@ -1,7 +1,7 @@
 body {
 	min-width: 960px;
 }
-body, a {
+body, a, .about-me .fa-search {
 	color: #59626a;
 }
 a:hover {
@@ -15,23 +15,37 @@ a:hover {
 }
 .modal .alert i {
 	margin-right: 10px;
-	font-size: 1.5em;
 	vertical-align: bottom;
+}
+.modal .alert i, .fa-check {
+	font-size: 1.5em;
+}
+.about-me, .nav li a {
+	font-size: 16px !important;
+}
+.about-me .fa-stack, .nav li a {
+	margin: 0;
+}
+.list-group-item, .nav li a {
+	border-radius: 0 !important;
+}
+.fa-stack, .tab-pane > div > .glyphicon, .tab-pane > div > .fa {
+	font-size: 2em;
 }
 
 /*===================== SIDEBAR =====================*/
 
-.list-group {
+.list-group, #skills .content-blocks {
 	margin-bottom: 0;
 	padding-right: 0;
 }
-.list-group a {
-	color: #323b43;
+.list-group a, .nav li a:hover, .nav .active a {
+	color: #323b43 !important;
+}
+.list-group-item, .list-group-item:hover > * {
+	background-color: #f4faff;
 }
 .list-group-item {
-	background-color: #f4faff;
-	border-radius: 0 !important;
-	font-size: 12px;
 	padding: 20px;
 }
 .list-group-item > * {
@@ -39,29 +53,24 @@ a:hover {
 }
 .list-group-item:hover > * {
 	opacity: 1;
-	background-color: #f4faff;
 }
 .list-group-item:last-child {
 	margin-bottom: -1px;
 }
 .about-me {
-	font-size: 16px;
 	padding: 16px 20px 15px 35px;
 }
 .about-me .fa-stack {
-	font-size: 1em;
+	font-size: 16px;
 	top: -4px;
-	margin: 0;
 }
 .about-me .fa-search {
-	color: #59626a;
 	top: -2px;
 }
 .fa-check {
 	position: absolute;
 	left: 5px;
 	top: 33%;
-	font-size: 1.5em;
 	color: #f4faff;
 }
 .list-group-item:hover > .fa-check {
@@ -69,7 +78,6 @@ a:hover {
 }
 .fa-stack {
 	margin: 0 5px 0 15px;
-	font-size: 2em;
 	top: -6px;
 }
 .fa-stack-1x, .github .fa-stack-2x {
@@ -94,9 +102,11 @@ a:hover {
 	padding-left: 0;
 	padding-right: 0;
 }
+.nav, .content-blocks {
+	border: 1px solid #ced7df;
+}
 .nav {
 	background-color: #f4f7f9;
-	border: 1px solid #ced7df;
 /*	position: fixed;*/
 /*	width: 100%;*/
 }
@@ -107,17 +117,11 @@ a:hover {
 	border-top-color: #fff !important;
 }
 .nav li a {
-	margin: 0;
 	padding: 15px 40px;
-	border-radius: 0;
-	font-size: 16px;
 }
 .nav li a span {
 	top: 2px;
 	margin-left: 5px;
-}
-.nav li a:hover, .nav .active a {
-	color: #323b43 !important;
 }
 
 /*===================== PROFILE TAB =====================*/
@@ -131,13 +135,10 @@ a:hover {
 	margin: 20px 0;
 }
 .tab-pane > div > .glyphicon, .tab-pane > div > .fa {
-	font-size: 2em;
 	color: #ced7df;
 }
 .content-blocks {
 	min-height: 100px;
-	padding: 10px;
-	border: 1px solid #ced7df;
 	border-radius: 3px;
 }
 .content-blocks .lead {
@@ -150,7 +151,7 @@ a:hover {
 	border-radius: 3px;
 	padding: 0;
 }
-.content-blocks a, .content-blocks div p {
+.content-blocks a, .content-blocks div p, .list-group-item {
 	font-size: 12px;
 }
 .content-blocks div p {
@@ -162,14 +163,10 @@ a:hover {
 #skills {
 	margin-left: 20px;
 }
-#skills .content-blocks, .content-block-footer {
+#skills .content-blocks, .content-block-footer, .content-blocks img {
 	padding: 0;
-	min-height: 0;
 }
-#skills .content-blocks {
-	margin-bottom: 0;
-}
-#skills h4 {
+#skills h4, .content-blocks {
 	padding: 10px;
 }
 .content-block-footer > div{
@@ -189,11 +186,4 @@ a:hover {
 	font-size: 20px;
 	line-height: 1em;
 }
-
-
-
-
-
-
-
 

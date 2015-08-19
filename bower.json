@@ -1,0 +1,23 @@
+{
+  "name": "get-buffered",
+  "version": "1.0.0",
+  "homepage": "aziz-ka.github.io/getbuffered",
+  "authors": [
+    "Aziz Hasanov"
+  ],
+  "description": "Buffer-Style Portfolio",
+  "main": "./src/js/main.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0"
+  }
+}

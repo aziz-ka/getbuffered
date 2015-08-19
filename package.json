@@ -1,0 +1,36 @@
+{
+  "name": "get-buffered",
+  "version": "1.0.0",
+  "description": "Buffer-Style Portfolio",
+  "main": "./src/js/main.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aziz-ka/getbuffered.git"
+  },
+  "author": "Aziz Hasanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aziz-ka/getbuffered/issues"
+  },
+  "homepage": "aziz-ka.github.io/getbuffered",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-inject": "^1.5.0",
+    "gulp-jscs": "^2.0.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-task-listing": "^1.0.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "wiredep": "^2.2.2"
+  }
+}

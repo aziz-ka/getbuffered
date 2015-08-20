@@ -1,0 +1,713 @@
+<!doctype html>
+<html class="no-js" lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Aziz Loves Buffer</title>
+		<meta name="description" content="">
+
+		<link rel="shortcut icon" href="build/images/favicon.ico">
+
+		<!-- build:css build/css/lib.css -->
+		<!-- bower:css -->
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:css build/css/app.css -->
+		<!-- inject:css -->
+		<!-- endinject -->
+		<!-- endbuild -->
+
+		<script src="bower_components/modernizr/modernizr.js"></script>
+	</head>
+	<body>
+
+		<!-- Google Tag Manager -->
+		<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW8CXS"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-PW8CXS');</script>
+		<!-- End Google Tag Manager -->
+		
+		<div class="modal fade" data-backdrop="static" id="entry-form" role="dialog">
+			<div class="modal-dialog modal-sm" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="exampleModalLabel">Which company are you form?</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="company" class="control-label">Choose below</label>
+								<select name="" id="company" class="form-control">
+									<option value="none"></option>
+									<option value="buffer">Buffer</option>
+									<option value="other">Some other company</option>
+								</select>
+							</div>
+						</form>
+
+						<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>Ohh! Check out <a href="http://aziz-ka.github.io" class="alert-link">this</a> instead.</div>
+						<div class="alert alert-success" role="alert"><i class="fa fa-check-circle"></i>Awesome! Come on in then.</div>
+
+					</div>
+				</div>
+			</div>
+		</div> <!--modal-->
+
+		<ul class="list-group col-xs-3">
+			<li class="list-group-item about-me">
+				<span>All about Aziz</span>
+				<span class="fa fa-stack fa-lg pull-right">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+					<i class="fa fa-search fa-stack-1x"></i>
+				</span>
+			</li>
+			<a href="https://github.com/aziz-ka" target="_blank">
+				<li class="list-group-item">
+					<i class="fa fa-check"></i>
+					<span class="fa-stack fa-lg col-xs-2 github">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-github-alt fa-stack-1x"></i>
+					</span>
+					<span><strong>Check out my</strong><br/>Github</span>
+				</li>
+			</a>
+			<a href="http://www.linkedin.com/in/hasanovaziz/" target="_blank">
+				<li class="list-group-item">
+					<i class="fa fa-check"></i>
+					<span class="fa-stack fa-lg col-xs-2 linkedin">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-linkedin fa-stack-1x"></i>
+					</span>
+					<span><strong>Connect with me on</strong><br/>LinkedIn</span>
+				</li>
+			</a>
+			<a href="https://www.facebook.com/aziz.hasanov.923" target="_blank">
+				<li class="list-group-item">
+					<i class="fa fa-check"></i>
+					<span class="fa-stack fa-lg col-xs-2 facebook">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-facebook fa-stack-1x"></i>
+					</span>
+					<span><strong>Friend me on</strong><br/>Facebook</span>
+				</li>
+			</a>
+			<a href="mailto:hasanov.aziz@gmail.com" target="_blank">
+				<li class="list-group-item">
+					<i class="fa fa-check"></i>
+					<span class="fa-stack fa-lg col-xs-2 email">
+						<i class="fa fa-circle fa-stack-2x"></i>
+						<i class="fa fa-envelope-o fa-stack-1x"></i>
+					</span>
+					<span><strong>Get in touch via</strong><br/>Email</span>
+				</li>
+			</a>
+			<li class="list-group-item last-li"></li>
+		</ul> <!--list-group-->
+
+		<div class="col-xs-9 tabs">
+			<ul class="nav nav-tabs col-xs-12" role="tablist">
+				<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile <span class="glyphicon glyphicon-user"></span></a></li>
+				<li role="presentation"><a href="#skills" aria-controls="skills" role="tab" data-toggle="tab">Skills <span class="glyphicon glyphicon-cog"></span></a></li>
+				<li role="presentation"><a href="#projects" aria-controls="projects" role="tab" data-toggle="tab">Projects <span class="glyphicon glyphicon-th-large"></span></a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="profile">
+					<div class="col-xs-1 text-center"><span class="glyphicon glyphicon-link"></span></div>
+					<div class="col-xs-11 content-blocks">
+						<p class="lead">Junior web developer with emphasis and unparalleled love for a Javascript stack</p>
+						<img src="build/images/javascript-logo.png" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> The 11 Phases of a Web Developer&apos;s Career</h5>
+							<a href="http://code.tutsplus.com/articles/the-11-phases-of-a-web-developers-career-as-illustrated-by-memes--net-30840">http://code.tutsplus.com/articles/the-11-phases-of-a-web-developers-career-as-illustrated-by-memes--net-30840</a>
+							<p>The career of a web developer is an interesting one with many slopes. Considering a learning curve this steep, you can fully expect to live through periods of frustration, enlightenment, self-righteousness, and every mindset in between.</p>
+						</div>
+					</div>
+
+					<div class="col-xs-1 text-center"><span class="glyphicon glyphicon-link"></span></div>
+					<div class="col-xs-11 content-blocks">
+					<p class="lead">Recent graduate of Web Development Immersive at General Assembly</p>
+						<img src="build/images/ga.png" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> Web Development Immersive</h5>
+							<a href="https://generalassemb.ly/education/web-development-immersive">https://generalassemb.ly/education/web-development-immersive</a>
+							<p>We teach the skills you need to kickstart your career as a developer and a lifelong learner. From programming fundamentals to launching full-stack web apps, you&apos;ll learn to solve problems with code while applying industry best practices in a collaborative environment.</p>
+						</div>
+					</div>
+
+					<div class="col-xs-1 text-center"><span class="glyphicon glyphicon-link"></span></div>
+					<div class="col-xs-11 content-blocks">
+					<p class="lead">Admirer of clean code and minimalistic design</p>
+						<img src="build/images/dry.jpg" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> How DRY impacts JavaScript performance &frasl;&frasl; Faster JavaScript execution for the lazy developer</h5>
+							<a href="http://www.slideshare.net/mathiasbynens/how-dry-impacts-javascript-performance-faster-javascript-execution-for-the-lazy-developer">http://www.slideshare.net/mathiasbynens/how-dry-impacts-javascript-performance-faster-javascript-execution-for-the-lazy-developer</a>
+							<!--<p></p>-->
+						</div>
+					</div>
+
+					<div class="col-xs-1 text-center"><span class="glyphicon glyphicon-link"></span></div>
+					<div class="col-xs-11 content-blocks">
+					<p class="lead">Long distance swimmer</p>
+						<img src="build/images/martin.jpg" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> Swimming with sharks</h5>
+							<a href="http://www.theguardian.com/sport/2009/jan/04/swimming">http://www.theguardian.com/sport/2009/jan/04/swimming</a>
+							<p>Martin Strel devours the world&apos;s most dangerous rivers, only stopping for red wine at lunch. The Slovene may not look an athlete, but he is the greatest long&#45;distance swimmer the world has known.</p>
+						</div>
+					</div>
+
+					<div class="col-xs-1 text-center"><span class="glyphicon glyphicon-link"></span></div>
+					<div class="col-xs-11 content-blocks">
+					<p class="lead">Equity options trader</p>
+						<img src="build/images/tastytrade.png" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> Selling Premium</h5>
+							<a href="https://www.tastytrade.com/tt/learn/selling-premium?locale=en-US">https://www.tastytrade.com/tt/learn/selling-premium?locale=en-US</a>
+							<p>The term “selling premium” refers to selling options. There are many benefits to selling premium as opposed to buying premium, but there are environments where each strategy can flourish.</p>
+						</div>
+					</div>
+				</div> <!--profile-->
+
+				<div role="tabpanel" class="tab-pane" id="skills">
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Javascript</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span class="infinity">
+									&infin;
+									&infin;
+									&infin;
+									&infin;
+									&infin;
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Node.js &amp; Express.js</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Meteor</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">MongoDB</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">HTML5 &amp; CSS3</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Bootstrap &amp; Foundation</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Third Party APIs</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Git</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Gulp</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Sass</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Jasmine</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Backbone</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">Ruby On Rails</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 content-blocks">
+						<h4 class="text-center">PostgreSQL</h4>
+						<div class="col-xs-12 content-block-footer">
+							<div class="col-xs-4">
+								Love
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Proficiency
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-half-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+							<div class="col-xs-4">
+								Usage
+								<span>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star-o"></i>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div> <!--skills-->
+
+				<div role="tabpanel" class="tab-pane" id="projects">
+					<div class="col-xs-1 text-center"><span class="fa fa-users"></span></div>
+					<div class="col-xs-11 content-blocks">
+						<img src="build/images/stock-hunter.png" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> Stock Hunter</h5>
+							<a href="http://stock-hunter.meteor.com/">http://stock-hunter.meteor.com/</a>
+							<p>Stock Hunter delivers stock data such as price chart and option chain with simple unobstructive design in mind. Because it's all about numbers. Built using Meteor, Tradier API, and Bootstrap.</p>
+						</div>
+					</div>
+					<div class="col-xs-1 text-center"><span class="fa fa-leaf"></span></div>
+					<div class="col-xs-11 content-blocks">
+						<img src="build/images/claymeart.png" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> ClayMeArt</h5>
+							<a href="http://claymeart.com/">http://claymeart.com/</a>
+							<p>ClayMeArt is a portfolio website for stunning handcarfted clay products. It is fully responsive, fast and SEO optimized. Built with HTML5, CSS3 and JavaScript.</p>
+						</div>
+					</div>
+					<div class="col-xs-1 text-center"><span class="fa fa-line-chart"></span></div>
+					<div class="col-xs-11 content-blocks">
+						<img src="build/images/not-alone.png" alt="" class="col-xs-2">
+						<div class="col-xs-10">
+							<h5><span class="glyphicon glyphicon-link"></span> Stock Hunter</h5>
+							<a href="http://not-alone.herokuapp.com/">http://not-alone.herokuapp.com/</a>
+							<p>Not Alone aims to narrow the gap between older and yonger generations by bringing together people who often struggle with technology and those who are willing to help. Built with Ruby on Rails and Twilio API.</p>
+						</div>
+					</div>
+				</div> <!--projects-->
+			</div> <!--tab-content-->
+		</div> <!--nav-tabs-->
+		
+		<!-- build:js build/js/lib.js -->
+		<!-- bower:js -->
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:js build/js/app.js -->
+		<!-- inject:js -->
+		<!-- endinject -->
+		<!-- endbuild -->
+
+	</body>
+</html>

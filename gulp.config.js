@@ -5,15 +5,18 @@ module.exports = function() {
   var config = {
     src: src,
     build: build,
-    customJS: src + "js/*js",
     buildJS: build + "js/**/*.js",
     buildCSS: build + "css/**/*.css",
+    buildImages: build + "images/**/*.*",
+    buildFonts: build + "fonts/**/*.*",
+    buildIndex: "./index.html",
     srcJS: src + "js/**/*.js",
     srcSCSS: src + "css/**/*.scss",
-    img: src + "images/*.*",
-    index: "./index.html",
-    html: ["./*.html", src + "**/*.html"],
-    fonts: src + "fonts/*.*",
+    srcImg: src + "images/*.*",
+    srcIndex: src + "index.html",
+    html: src + "**/*.html",
+    fonts: ["./bower_components/font-awesome/fonts/**/*.*",
+            "./bower_components/bootstrap/fonts/**/*.*"],
     port: 3000,
     root: "./"
   };

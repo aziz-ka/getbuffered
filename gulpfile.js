@@ -5,56 +5,51 @@ var del = require("del");
 var wiredep = require("wiredep").stream;
 var $ = require("gulp-load-plugins")({lazy: true});
 
-// list all available tasks
 gulp.task("tasks", $.taskListing);
 
-// analyze js files for errors with jshint and jscs
 gulp.task("analyzeJS", function() {
   log("analyzing js");
 
   return gulp
-    .src(config.customJS)
+    .src(config.srcJS)
     .pipe($.jscs())
     .pipe($.jshint())
     .pipe($.jshint.reporter("fail"));
 });
 
-// minify main.js only since all other js files are already minified
 gulp.task("scripts", [/*"analyzeJS", */"clean-scripts"], function() {
-  log("minifying js files");
+  log("copying scripts");
 
   return gulp
     .src(config.srcJS)
     .pipe($.plumber())
-    .pipe($.uglify())
-    .pipe(gulp.dest(config.build + "js"));
+    // .pipe($.uglify())
+    .pipe(gulp.dest(config.build + "js"))
+    .pipe(browserSync.stream());
 });
 
-// compile sass to css, add necessary browser prefixes and minify it
 gulp.task("styles", ["clean-styles"], function() {
-  log("compiling and minifying css");
+  log("compiling and vendor-prefixing css");
 
   return gulp
     .src(config.srcSCSS)
     .pipe($.plumber())
-    .pipe($.sass({outputStyle: "compressed"}))
+    .pipe($.sass({outputStyle: "expanded"}))
     .pipe($.autoprefixer({browsers: ["last 10 versions", "> 5%", "ie >= 9"]}))
     .pipe(gulp.dest(config.build + "css"))
     .pipe(browserSync.stream());
 });
 
-// compress images
-gulp.task("images", function() {
-  log("compressing images");
+gulp.task("images", ["clean-images"], function() {
+  log("compressing and copying images");
 
   return gulp
-    .src(config.img)
+    .src(config.srcImg)
     .pipe($.imagemin())
     .pipe(gulp.dest(config.build + "images"));
 });
 
-// copy fonts into the build folder
-gulp.task("fonts", function() {
+gulp.task("fonts", ["clean-fonts"],  function() {
   log("copying fonts");
 
   return gulp
@@ -62,37 +57,90 @@ gulp.task("fonts", function() {
     .pipe(gulp.dest(config.build + "fonts"));
 });
 
-// clean styles on compile
-gulp.task("clean-styles", function(done) {
-  var files = config.buildCSS;
-  clean(files, done);
+gulp.task("index", ["clean-index"], function() {
+  log("copying index.html into root");
+
+  return gulp
+    .src(config.srcIndex)
+    .pipe(gulp.dest(config.root))
+    .pipe(browserSync.stream());
 });
 
-// clean scripts on linting and minifying
 gulp.task("clean-scripts", function(done) {
-  var files = config.buildJS;
-  clean(files, done);
+  clean(config.buildJS, done);
 });
 
-// watch for any changes in js, css, html files
+gulp.task("clean-styles", function(done) {
+  clean(config.buildCSS, done);
+});
+
+gulp.task("clean-images", function(done) {
+  clean(config.buildImages, done);
+});
+
+gulp.task("clean-fonts", function(done) {
+  clean(config.buildFonts, done);
+});
+
+gulp.task("clean-index", function(done) {
+  clean(config.buildIndex, done);
+});
+
+gulp.task("browser-sync", ["wiredep"], function() {
+  if(browserSync.active) {
+    return; /* if it's already running, do nothing */
+  }
+
+  log("starting browser-sync on port " + config.port);
+
+  browserSync.init({
+    server: {
+      baseDir: config.root
+    },
+    minify: false,
+    logLevel: "debug", /* detailed log */
+    reloadDelay: 1000
+  });
+
+  gulp.watch(config.srcSCSS, ["styles"]);
+  gulp.watch(config.srcJS, ["scripts"]);
+  gulp.watch(config.html, ["index", "wiredep"]);
+});
+
+gulp.task("build", ["wiredep", "images", "fonts"], function() {
+  log("optimizing and building html, css and js");
+
+  var assets = $.useref.assets();
+
+  return gulp
+    .src(config.buildIndex)
+    .pipe($.plumber())
+    .pipe(assets)
+    .pipe($.if("*.js", $.uglify()))
+    .pipe($.if("*.css", $.minifyCss()))
+    .pipe(assets.restore())
+    // .pipe($.minifyHtml())
+    .pipe($.useref())
+    .pipe(gulp.dest(config.root));
+});
+
 gulp.task("watch", function() {
   log("watching over js, css, html files");
 
   gulp.watch(config.srcJS, ["scripts"]);
   gulp.watch(config.srcSCSS, ["styles"]);
-  gulp.watch(config.img, ["images"]);
+  gulp.watch(config.srcImg, ["images"]);
 });
 
-// wire bower dependencies into source code
 // .bowerrc file runs wiredep task whenever new package is added or removed from bower_components
 gulp.task("wiredep", ["styles", "scripts"], function() {
   log("wiring css & js dependencies into index.html");
 
   return gulp
-    .src(config.index)
-    .pipe(wiredep())
-    .pipe($.inject(gulp.src(config.buildCSS), {relative: true}))
-    .pipe($.inject(gulp.src(config.buildJS), {relative: true}))
+    .src(config.srcIndex)
+    .pipe(wiredep({ignorePath: "../"}))
+    .pipe($.inject(gulp.src(config.buildCSS), {relative: true, ignorePath: "../"}))
+    .pipe($.inject(gulp.src(config.buildJS), {relative: true, ignorePath: "../"}))
     .pipe(gulp.dest(config.root));
 });
 
@@ -103,33 +151,6 @@ function clean(path, done) {
   log("cleaning " + $.util.colors.yellow(path));
   del(path, done);
 }
-
-// kick off browser-sync
-gulp.task("browser-sync", function() {
-  if(browserSync.active) {
-    return; /* if it's already running, do nothing */
-  }
-
-  log("starting browser-sync on port " + config.port);
-
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    },
-    ghostMode: {
-      clicks: true,
-      location: true,
-      forms: true,
-      scroll: true
-    },
-    injectChanges: true, /* inject changes into document insted of reloading it when possible */
-    logLevel: "debug", /* detailed log */
-    reloadDelay: 1000
-  });
-
-  gulp.watch(config.srcSCSS, ["styles"]);
-  gulp.watch(config.html).on("change", browserSync.reload);
-});
 
 // log currently running task
 function log(msg) {

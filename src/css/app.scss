@@ -1,0 +1,205 @@
+$a-color: #59626a;
+$side-color: #f4faff;
+$coal-color: #323b43;
+$border-color: #ced7df;
+$ratings-color: #168eea;
+$ratings-bg-color: #fafafa;
+$nav-bg-color: #f4f7f9;
+$checkmark-color: #75beff;
+
+body {
+	min-width: 960px;
+}
+body, a {
+	color: $a-color;
+}
+a:hover {
+	text-decoration: none;
+}
+.modal-backdrop {
+	opacity: .9 !important;
+}
+.modal-dialog {
+	margin: 150px auto;
+}
+.modal .alert i {
+	margin-right: 10px;
+	vertical-align: bottom;
+}
+.modal .alert i, .fa-check {
+	font-size: 18px;
+}
+.about-me, .nav li a {
+	font-size: 16px !important;
+}
+.about-me .fa-stack, .nav li a {
+	margin: 0 !important;
+}
+.list-group-item, .nav li a {
+	border-radius: 0 !important;
+}
+.fa-stack, .tab-pane > div > .glyphicon, .tab-pane > div > .fa {
+	font-size: 2em;
+}
+
+/*===================== SIDEBAR =====================*/
+
+.list-group a, .nav li a:hover, .nav .active a {
+	color: $coal-color !important;
+}
+.list-group {
+	margin-bottom: 0 !important;
+	&, #skills .content-blocks {
+		padding-right: 0;
+	}
+	.list-group-item {
+		&, &:hover > * {
+			background-color: $side-color;
+		}
+		padding: 20px;
+		& > * {
+			opacity: .6;
+		}
+		&:hover > * {
+			opacity: 1;
+		}
+		&:last-child {
+			margin-bottom: -1px;
+		}
+		&.about-me {
+			padding: 16px 20px 15px 35px;
+			.fa-stack {
+				font-size: 16px;
+				top: -4px;
+			}
+			.fa-search {
+				top: -2px;
+				color: $a-color;
+			}
+		}
+		.fa-check {
+			position: absolute;
+			left: 5px;
+			top: 33%;
+			color: $side-color;
+		}
+		&:hover > .fa-check {
+			color: $checkmark-color;
+		}
+		.fa-stack {
+			margin: 0 5px 0 15px;
+			top: -6px;
+		}
+		.fa-stack-1x, .github .fa-stack-2x {
+			color: #fff;
+		}
+		.github .fa-stack-1x {
+			color: #000;
+		}
+		.linkedin .fa-stack-2x {
+			color: #007bb6;
+		}
+		.facebook .fa-stack-2x {
+			color: #3b5998;
+		}
+		.email .fa-stack-2x {
+			color: #007bb6;
+		}
+	}
+}
+
+/*===================== NAV TABS =====================*/
+
+.tabs {
+	padding-left: 0;
+	padding-right: 0;
+	.nav {
+		border: 1px solid $border-color;
+		background-color: $nav-bg-color;
+		& li:first-child a, & {
+			border-left: 0;
+		}
+		.active a {
+			border-top-color: #fff !important;
+		}
+		li a {
+			padding: 15px 40px;
+			span {
+				top: 2px;
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+/*===================== PROFILE TAB =====================*/
+
+.tab-content {
+	margin-top: 75px;
+	overflow-y: scroll;
+	padding-right: 15px;
+	.tab-pane	{
+		& > div {
+			margin: 20px 0;
+			& > .glyphicon, & > .fa {
+				color: $border-color;
+			}
+		}
+		.content-blocks {
+			min-height: 100px;
+			border: 1px solid $border-color;
+			border-radius: 3px;
+			& .lead {
+				padding-bottom: 40px;
+				border-bottom: 1px solid $nav-bg-color;
+			}
+			& img {
+				max-width: 100px;
+				max-height: 100px;
+				border-radius: 3px;
+				padding: 0;
+			}
+			& div p {
+				padding-top: 8px;
+			}
+			&, h4 {
+				padding: 10px;
+			}
+		}
+	}
+}
+.content-blocks a, .content-blocks div p, .list-group-item {
+	font-size: 12px;
+}
+
+/*===================== SKILLS TAB =====================*/
+
+#skills {
+	margin-left: 20px;
+	.content-blocks, .content-block-footer, .content-blocks img {
+		padding: 0 !important;
+	}
+	.content-blocks {
+		margin-bottom: 0;
+	}
+	.content-block-footer {
+		& > div {
+			border-top: 1px solid $border-color;
+			padding: 15px;
+			background-color: $ratings-bg-color;
+			&:nth-child(2n) {
+				border-left: 1px solid $border-color;
+				border-right: 1px solid $border-color;
+			}
+		}
+		div span {
+			float: right;
+			color: $ratings-color;
+		}
+	}
+	.infinity {
+		font-size: 20px;
+		line-height: 1em;
+	}
+}
+

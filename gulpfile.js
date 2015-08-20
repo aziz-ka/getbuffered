@@ -17,7 +17,7 @@ gulp.task("analyzeJS", function() {
     .pipe($.jshint.reporter("fail"));
 });
 
-gulp.task("scripts", [/*"analyzeJS", */"clean-scripts"], function() {
+gulp.task("scripts", ["clean-scripts"], function() {
   log("copying scripts");
 
   return gulp
